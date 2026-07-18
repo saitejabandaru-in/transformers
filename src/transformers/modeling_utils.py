@@ -2124,7 +2124,7 @@ class PreTrainedModel(nn.Module, EmbeddingAccessMixin, ModuleUtilsMixin, PushToH
     def _can_set_attn_implementation(cls) -> bool:
         """Detect whether the class supports setting its attention implementation dynamically. Inspects the module
         source as a heuristic, which avoids maintaining yet another property flag. Instead, the flag is set dynamically
-        on the first succesful call.
+        on the first successful call.
         """
         # Early return if there is a cached value
         cached_value = getattr(cls, "_can_set_attn_implementation_cached_value", None)
@@ -2153,7 +2153,7 @@ class PreTrainedModel(nn.Module, EmbeddingAccessMixin, ModuleUtilsMixin, PushToH
     def _can_set_experts_implementation(cls) -> bool:
         """Detect whether the class supports setting its experts implementation dynamically. Inspects the module source
         as a heuristic, which avoids maintaining yet another property flag. Instead, the flag is set dynamically
-        on the first succesful call.
+        on the first successful call.
         """
         # Early return if there is a cached value
         cached_value = getattr(cls, "_can_set_experts_implementation_cached_value", None)
